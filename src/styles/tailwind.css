@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --color-primary: #1E40AF;
+    --color-primary-50: #EFF6FF;
+    --color-primary-100: #DBEAFE;
+    --color-primary-500: #3B82F6;
+    --color-primary-600: #2563EB;
+    --color-primary-700: #1D4ED8;
+    --color-primary-900: #1E3A8A;
+
+    --color-secondary: #64748B;
+    --color-secondary-50: #F8FAFC;
+    --color-secondary-100: #F1F5F9;
+    --color-secondary-200: #E2E8F0;
+    --color-secondary-300: #CBD5E1;
+    --color-secondary-400: #94A3B8;
+    --color-secondary-600: #475569;
+    --color-secondary-700: #334155;
+    --color-secondary-800: #1E293B;
+    --color-secondary-900: #0F172A;
+
+    --color-accent: #0EA5E9;
+    --color-accent-50: #F0F9FF;
+    --color-accent-100: #E0F2FE;
+    --color-accent-200: #BAE6FD;
+    --color-accent-500: #0EA5E9;
+    --color-accent-600: #0284C7;
+    --color-accent-700: #0369A1;
+
+    --color-background: #FAFAFA;
+    --color-surface: #FFFFFF;
+
+    --color-text-primary: #0F172A;
+    --color-text-secondary: #475569;
+
+    --color-success: #059669;
+    --color-success-50: #ECFDF5;
+    --color-success-100: #D1FAE5;
+    --color-success-500: #10B981;
+
+    --color-warning: #D97706;
+    --color-warning-50: #FFFBEB;
+    --color-warning-100: #FEF3C7;
+    --color-warning-500: #F59E0B;
+
+    --color-error: #DC2626;
+    --color-error-50: #FEF2F2;
+    --color-error-100: #FEE2E2;
+    --color-error-500: #EF4444;
+
+    --color-border: rgba(148, 163, 184, 0.2);
+    --color-border-light: rgba(148, 163, 184, 0.1);
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Dark Mode Colors */
+  [data-theme="dark"] {
+    --color-primary: #3B82F6;
+    --color-primary-50: #1E3A8A;
+    --color-primary-100: #1E40AF;
+    --color-primary-500: #3B82F6;
+    --color-primary-600: #2563EB;
+    --color-primary-700: #60A5FA;
+    --color-primary-900: #93C5FD;
+
+    --color-secondary: #64748B;
+    --color-secondary-50: #0F172A;
+    --color-secondary-100: #1E293B;
+    --color-secondary-200: #334155;
+    --color-secondary-300: #475569;
+    --color-secondary-400: #64748B;
+    --color-secondary-600: #94A3B8;
+    --color-secondary-700: #CBD5E1;
+    --color-secondary-800: #E2E8F0;
+    --color-secondary-900: #F1F5F9;
+
+    --color-accent: #0EA5E9;
+    --color-accent-50: #0C4A6E;
+    --color-accent-100: #075985;
+    --color-accent-200: #0369A1;
+    --color-accent-500: #0EA5E9;
+    --color-accent-600: #38BDF8;
+    --color-accent-700: #7DD3FC;
+
+    --color-background: #0F172A;
+    --color-surface: #1E293B;
+
+    --color-text-primary: #F1F5F9;
+    --color-text-secondary: #94A3B8;
+
+    --color-success: #10B981;
+    --color-success-50: #064E3B;
+    --color-success-100: #065F46;
+    --color-success-500: #10B981;
+
+    --color-warning: #F59E0B;
+    --color-warning-50: #78350F;
+    --color-warning-100: #92400E;
+    --color-warning-500: #F59E0B;
+
+    --color-error: #EF4444;
+    --color-error-50: #7F1D1D;
+    --color-error-100: #991B1B;
+    --color-error-500: #EF4444;
+
+    --color-border: rgba(148, 163, 184, 0.2);
+    --color-border-light: rgba(148, 163, 184, 0.1);
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .transition-smooth {
+    transition: all 200ms ease-out;
+  }
+
+  .transition-layout {
+    transition: all 400ms ease-in-out;
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-modal {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .sidebar-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden;
+  }
+}
